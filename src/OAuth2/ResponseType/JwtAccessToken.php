@@ -151,7 +151,7 @@ class JwtAccessToken extends AccessToken
                 throw new \InvalidArgumentException('jwt_extra_payload_callable must return array');
             }
             
-            $payload = array_merge($extra, $payload);
+            $payload = array_merge($payload, $extra);
         }
         
         return $payload;
